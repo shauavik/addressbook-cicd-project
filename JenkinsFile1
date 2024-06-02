@@ -11,7 +11,7 @@ new commit  pipeline{
         stage('Checkout on git'){
             agent any
             steps{
-                git 'https://github.com/devops-trainer/DevOpsClassCodes.git'
+                git 'https://github.com/shauavik/addressbook-cicd-project.git'
             }
         }
         stage('Compile'){
@@ -29,7 +29,7 @@ new commit  pipeline{
         stage('UnitTest'){
             agent {label 'win_slave'}
             steps{
-                git 'https://github.com/devops-trainer/DevOpsClassCodes.git'
+                git 'https://github.com/shauavik/addressbook-cicd-project.git'
                 bat 'mvn test'
             }
         }
